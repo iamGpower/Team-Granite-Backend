@@ -13,7 +13,14 @@ app.use(express.json());
 app.get('/', (req, res) =>  res.json({msg:"Welcome to Dockerized User Management App"}));
 
 // Define Routes 
-app.use('/users', require('./routes/users'))
+//resgister
+app.use('/users', require('./routes/users'));
+//phone number
+app.use('/phoneNumber', require('./routes/phoneNumber'));
+//first name
+app.use('/userFirstname', require('./routes/userFirstName'));
+//last name
+app.use('/userLastname', require('./routes/userLastname'));
 //testing mongoose connection
 // app.post('/createUser',(request,response) => {
 //     console.log(request.body);
